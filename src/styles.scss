@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Nunito+Sans:ital,opsz,wght@1,6..12,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './styles/button';
+
+html,
+body {
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+body * {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f5f5f5;
+  @apply text-brand;
+}
+
+
+[disabled] {
+  @apply opacity-50 cursor-not-allowed #{!important};
+}

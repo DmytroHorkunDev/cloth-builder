@@ -1,0 +1,7 @@
+a:not(.link) {
+  @apply inline-flex items-center justify-center bg-brand gap-2 rounded-lg text-white cursor-pointer transition opacity-90 duration-300 border-2 font-semibold p-3 border-brand;
+
+  &:not([disabled]) {
+    @apply hover:border-white hover:opacity-100 focus:ring focus:outline-none;
+  }
+}
