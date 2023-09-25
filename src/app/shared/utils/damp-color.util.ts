@@ -1,5 +1,5 @@
 import { Color } from 'three';
-import { damp } from 'three/src/math/MathUtils';
+import { damp } from 'three/src/math/MathUtils.js';
 
 export const dampColor = (currentColor: Color, targetColor: Color, lambda: number = 0.7, delta: number = 0.25): void => {
 

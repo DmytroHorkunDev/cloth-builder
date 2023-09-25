@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, CUSTOM_ELEMENTS_SCHEMA, Input } from '@angular/core';
 import { NgtBeforeRenderEvent } from 'angular-three';
 import { Camera, Group } from 'three';
-import { damp } from 'three/src/math/MathUtils';
+import { damp } from 'three/src/math/MathUtils.js';
 import { clamp } from '../../../../shared/utils/clamp-util';
 import { normalizeAzimuth } from '../../../../shared/utils/normalize-azimuth.util';
 
