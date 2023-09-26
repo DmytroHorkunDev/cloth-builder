@@ -6,8 +6,8 @@ using [Angular Three](https://github.com/angular-threejs/angular-three) and allo
 ## 🏎️ How to run?
 
 1. Clone the repository
-2. Run `npm install` to install dependencies
-3. Run `npm start` to start the application
+2. Run `yarn install` to install dependencies
+3. Run `yarn start` to start the application
 4. Open `http://localhost:4200` in your browser
 
 ## 🖼️ Demo
