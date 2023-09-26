@@ -12,7 +12,7 @@ using [Angular Three](https://github.com/angular-threejs/angular-three) and allo
 
 ## 🖼️ Demo
 
-Feel free to check out the [demo](https://cloth-builder.netlify.app/) of the application.
+Feel free to check out the [demo](https://cloth-builder.onrender.com/) of the application.
 
 ## ⚒️ Technologies
 
