@@ -118,7 +118,7 @@ export class ClothComponent {
     const viewport = this.viewport();
     const isFullScreen = this.isFullScreen();
 
-    return Math.max(((isFullScreen ? 1.5 : 1) + this.scale) * 1000 / viewport, 1.125);
+    return Math.max(((isFullScreen ? 1.5 : 0.65) + this.scale) * 1000 / viewport, 1.2);
   });
 
   public readonly isFullScreen = toSignal(this.#eventBus.on<boolean>(EEvents.IsFullScreenConfig), {

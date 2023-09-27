@@ -15,7 +15,7 @@ import { TConfiguratorView } from './types/configurator-view.type';
     <div class="relative h-screen overflow-hidden  mx-auto">
       <div
         [ngClass]="{
-          'flex max-w-screen-2xl mx-auto p-8 lg:p-12 items-center': !isFullScreen()
+          'flex max-w-screen-2xl mx-auto p-8 lg:p-12 items-end md:items-center': !isFullScreen()
         }"
         class="pointer-events-none absolute z-10 inset-0"
         [@routeAnimations]="prepareRoute(outlet)"

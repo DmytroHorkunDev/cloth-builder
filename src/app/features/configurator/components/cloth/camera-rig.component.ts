@@ -45,10 +45,12 @@ export class CameraRigComponent {
     const { y: targetY } = object.rotation;
 
     const xAxisShift = this.#getXAxisNonFullScreenShift(state.size.width);
+    const yAxisShift = this.#getYAxisNonFullScreenShift(state.size.width);
 
     this.#updateCameraPosition(
       camera,
       xAxisShift,
+      yAxisShift,
       delta
     );
 
@@ -75,11 +77,16 @@ export class CameraRigComponent {
   }
 
   #getXAxisNonFullScreenShift(viewportWidth: number): number {
-    return -(viewportWidth / (1000 * 11));
+    return viewportWidth <= 768 ? 0 : -(viewportWidth / (1000 * 11));
   }
 
-  #updateCameraPosition(camera: Camera, xShift: number, delta: number): void {
+  #getYAxisNonFullScreenShift(viewportWidth: number): number {
+    return viewportWidth <= 768 ? -0.275 : 0;
+  }
+
+  #updateCameraPosition(camera: Camera, xShift: number, yShift: number, delta: number): void {
     camera.position.x = damp(camera.position.x, this.isFullScreen ? 0 : xShift, this.lambda * this.divider, delta);
+    camera.position.y = damp(camera.position.y, this.isFullScreen ? 0 : yShift, this.lambda * this.divider, delta);
     camera.position.z = damp(camera.position.z, this.isFullScreen ? this.maxDistance : this.minDistance, this.lambda * this.divider, delta);
   }
 
